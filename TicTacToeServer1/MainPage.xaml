@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToeClient.MainPage"
+             Title="Kółko i Krzyżyk">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Kółko i Krzyżyk - Multiplayer"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                <Label Text="Adres IP serwera:" VerticalOptions="Center"/>
+                <Entry x:Name="ServerIpEntry" Placeholder="127.0.0.1" WidthRequest="150" />
+                <Button x:Name="ConnectButton" Text="Połącz" Clicked="OnConnectClicked" />
+            </HorizontalStackLayout>
+
+            <Label
+                x:Name="PlayerLabel"
+                Text="Gracz: -"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="StatusLabel"
+                Text="Niepołączony"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Grid 
+                ColumnDefinitions="*,*,*"
+                RowDefinitions="*,*,*"
+                ColumnSpacing="5"
+                RowSpacing="5"
+                HeightRequest="300"
+                WidthRequest="300"
+                HorizontalOptions="Center">
+
+                <Button x:Name="Button0" Grid.Row="0" Grid.Column="0" FontSize="40" />
+                <Button x:Name="Button1" Grid.Row="0" Grid.Column="1" FontSize="40" />
+                <Button x:Name="Button2" Grid.Row="0" Grid.Column="2" FontSize="40" />
+                <Button x:Name="Button3" Grid.Row="1" Grid.Column="0" FontSize="40" />
+                <Button x:Name="Button4" Grid.Row="1" Grid.Column="1" FontSize="40" />
+                <Button x:Name="Button5" Grid.Row="1" Grid.Column="2" FontSize="40" />
+                <Button x:Name="Button6" Grid.Row="2" Grid.Column="0" FontSize="40" />
+                <Button x:Name="Button7" Grid.Row="2" Grid.Column="1" FontSize="40" />
+                <Button x:Name="Button8" Grid.Row="2" Grid.Column="2" FontSize="40" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
